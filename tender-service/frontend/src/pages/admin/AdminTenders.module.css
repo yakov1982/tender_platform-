@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.createBtn {
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.createBtn:hover {
+  background: var(--accent-hover);
+  text-decoration: none;
+  color: var(--bg-primary);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.table td {
+  font-size: 0.95rem;
+}
+
+.link {
+  color: var(--accent);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status_draft {
+  background: rgba(139, 148, 158, 0.2);
+  color: var(--text-secondary);
+}
+
+.status_bidding {
+  background: rgba(63, 185, 80, 0.2);
+  color: var(--success);
+}
+
+.status_awarded {
+  background: rgba(88, 166, 255, 0.2);
+  color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.actionLink {
+  color: var(--accent);
+}
+
+.actionBtn {
+  padding: 0.25rem 0.5rem;
+  background: var(--success);
+  border: none;
+  border-radius: 4px;
+  color: var(--bg-primary);
+  font-size: 0.8rem;
+}
+
+.actionBtn:hover {
+  opacity: 0.9;
+}
+
+.deleteBtn {
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: 1px solid var(--danger);
+  border-radius: 4px;
+  color: var(--danger);
+  font-size: 0.8rem;
+}
+
+.deleteBtn:hover {
+  background: rgba(248, 81, 73, 0.2);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
