@@ -1,0 +1,139 @@
+.wrapper {
+  max-width: 720px;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.status_bidding {
+  background: rgba(63, 185, 80, 0.2);
+  color: var(--success);
+}
+
+.status_awarded {
+  background: rgba(88, 166, 255, 0.2);
+  color: var(--accent);
+}
+
+.title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+.description h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.description p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.bidForm {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.bidForm h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.bidForm label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bidForm label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  resize: vertical;
+}
+
+.submit {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--bg-primary);
+  font-weight: 500;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  padding: 0.75rem;
+  background: rgba(63, 185, 80, 0.15);
+  border: 1px solid var(--success);
+  border-radius: 8px;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.error {
+  padding: 0.75rem;
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  color: var(--danger);
+  margin-bottom: 1rem;
+}
