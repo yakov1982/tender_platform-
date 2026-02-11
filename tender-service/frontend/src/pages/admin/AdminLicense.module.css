@@ -1,0 +1,127 @@
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.description a {
+  color: var(--accent);
+}
+
+.statusCard,
+.formCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.statusCard h2,
+.formCard h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.statusRow {
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  display: inline-block;
+  width: 140px;
+  color: var(--text-secondary);
+}
+
+.valid {
+  color: var(--success);
+}
+
+.invalid {
+  color: var(--danger);
+}
+
+.formCard label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.formCard label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.submit {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--bg-primary);
+  font-weight: 500;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  padding: 0.75rem;
+  background: rgba(63, 185, 80, 0.15);
+  border: 1px solid var(--success);
+  border-radius: 8px;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.error {
+  padding: 0.75rem;
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  color: var(--danger);
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.note code {
+  background: var(--bg-tertiary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}

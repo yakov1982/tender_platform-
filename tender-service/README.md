@@ -2,6 +2,8 @@
 
 Клиент-серверный сервис для управления тендерными закупками с интерфейсами для пользователей и администратора.
 
+**Интеграция с License_key_server** — поддержка лицензирования системы.
+
 ## Технологии
 
 - **Backend**: Python, FastAPI, SQLAlchemy, SQLite
@@ -52,3 +54,28 @@ npm run dev
 После запуска `init_admin`:
 - **Email**: admin@example.com
 - **Пароль**: admin123
+
+## Интеграция лицензирования (License_key_server)
+
+Система поддерживает проверку лицензии через [License_key_server](https://github.com/yakov1982/License_key_server).
+
+### Настройка
+
+1. Запустите сервер лицензий (на другом порту, т.к. тендерная система использует 8000):
+   ```bash
+   cd License_key_server
+   pip install -r requirements.txt
+   uvicorn server.main:app --host 0.0.0.0 --port 8001
+   ```
+
+2. В админ-интерфейсе License_key_server (http://localhost:8001) создайте продукт **TenderSystem** и сгенерируйте лицензию.
+
+3. Настройте переменные окружения для тендерной системы:
+   ```bash
+   export LICENSE_SERVER_URL=http://localhost:8001
+   export LICENSE_PRODUCT_NAME=TenderSystem
+   ```
+
+4. В панели администратора тендерной системы (раздел «Лицензия») введите лицензионный ключ.
+
+Без `LICENSE_SERVER_URL` проверка лицензии отключена (режим разработки).

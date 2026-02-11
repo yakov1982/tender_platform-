@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import init_db
-from app.routes import auth, tenders, bids, users
+from app.routes import auth, tenders, bids, users, license
 
 
 @asynccontextmanager
@@ -32,6 +32,7 @@ app.include_router(auth.router, prefix="/api")
 app.include_router(tenders.router, prefix="/api")
 app.include_router(bids.router, prefix="/api")
 app.include_router(users.router, prefix="/api")
+app.include_router(license.router, prefix="/api")
 
 
 @app.get("/")

@@ -95,4 +95,18 @@ export const usersApi = {
   update: (id: number, data: Partial<User>) => api.patch(`/users/${id}`, data),
 };
 
+export interface LicenseStatus {
+  configured: boolean;
+  valid: boolean;
+  message: string;
+  product_name?: string;
+  expires_at?: string;
+}
+
+export const licenseApi = {
+  getStatus: () => api.get<LicenseStatus>('/license/status'),
+  configure: (licenseKey: string) =>
+    api.post<LicenseStatus>('/license/configure', { license_key: licenseKey }),
+};
+
 export default api;

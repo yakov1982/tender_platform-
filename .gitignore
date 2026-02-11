@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+*.db
+.env
+tender-service/frontend/node_modules/
+tender-service/frontend/dist/

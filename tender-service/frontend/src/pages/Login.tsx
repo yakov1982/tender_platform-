@@ -21,7 +21,8 @@ export default function Login() {
       login(data.access_token, data.user);
       navigate(data.user.role === 'admin' ? '/admin' : '/');
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Ошибка входа');
+      const axiosErr = err as { response?: { data?: { detail?: string } } };
+      setError(axiosErr.response?.data?.detail || 'Ошибка входа');
     } finally {
       setLoading(false);
     }

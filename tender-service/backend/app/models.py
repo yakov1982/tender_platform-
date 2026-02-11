@@ -69,3 +69,13 @@ class Bid(Base):
 
     tender = relationship("Tender", back_populates="bids")
     bidder = relationship("User", back_populates="bids")
+
+
+class SystemConfig(Base):
+    """Key-value store for system configuration (e.g. license key)."""
+    __tablename__ = "system_config"
+
+    id = Column(Integer, primary_key=True, index=True)
+    key = Column(String(100), unique=True, nullable=False, index=True)
+    value = Column(Text, default="")
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

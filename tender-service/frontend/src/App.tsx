@@ -13,6 +13,7 @@ import AdminTenders from './pages/admin/AdminTenders';
 import AdminTenderEdit from './pages/admin/AdminTenderEdit';
 import AdminBids from './pages/admin/AdminBids';
 import AdminUsers from './pages/admin/AdminUsers';
+import AdminLicense from './pages/admin/AdminLicense';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { token } = useAuth();
@@ -58,6 +59,7 @@ function AppRoutes() {
         <Route path="tenders/:id/edit" element={<AdminTenderEdit />} />
         <Route path="tenders/:id/bids" element={<AdminBids />} />
         <Route path="users" element={<AdminUsers />} />
+        <Route path="license" element={<AdminLicense />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

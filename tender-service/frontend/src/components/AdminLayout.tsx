@@ -15,6 +15,7 @@ export default function AdminLayout() {
         <nav className={styles.nav}>
           <Link to="/admin/tenders" className={styles.navLink}>Тендеры</Link>
           <Link to="/admin/users" className={styles.navLink}>Пользователи</Link>
+          <Link to="/admin/license" className={styles.navLink}>Лицензия</Link>
         </nav>
         <div className={styles.sidebarFooter}>
           <Link to="/" className={styles.backLink}>← На сайт</Link>
